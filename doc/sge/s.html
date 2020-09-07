@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>sge.s &#8212; Seclusion Game Engine 1.6 documentation</title>
+    <title>sge.s &#8212; Seclusion Game Engine 1.7 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -47,6 +47,16 @@ variable name starts with an underscore, its value excludes this
 preceding underscore.  For example, a variable called <code class="docutils literal notranslate"><span class="pre">spam</span></code> would
 have a value of <code class="docutils literal notranslate"><span class="pre">&quot;spam&quot;</span></code>, and a variable called <code class="docutils literal notranslate"><span class="pre">_1984</span></code> would have a
 value of <code class="docutils literal notranslate"><span class="pre">&quot;1984&quot;</span></code>.</p>
+<p>This module only contains these variable assignments and nothing else,
+so if it is useful to you, you can add assignments to this module as
+long as said assignments conform with the specification above.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This module does not use the convention of marking &quot;private&quot; members
+with a leading underscore; rather, a leading underscore is used to
+ensure that strings starting with numeric characters can be
+supported.  All variables in this module are available for use.</p>
+</div>
 <dl class="data">
 <dt id="sge.s.sge.s._0">
 <code class="descclassname">sge.s.</code><code class="descname">_0</code><a class="headerlink" href="#sge.s.sge.s._0" title="Permalink to this definition">¶</a></dt>
