@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>sge.joystick &#8212; Seclusion Game Engine 1.7 documentation</title>
+    <title>sge.joystick &#8212; Seclusion Game Engine 2.0 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -61,7 +61,7 @@ in while the game was running.</p>
 <code class="docutils literal notranslate"><span class="pre">1</span></code>, where <code class="docutils literal notranslate"><span class="pre">0</span></code> is centered, <code class="docutils literal notranslate"><span class="pre">-1</span></code> is all the way to the left or
 up, and <code class="docutils literal notranslate"><span class="pre">1</span></code> is all the way to the right or down.  Return <code class="docutils literal notranslate"><span class="pre">0</span></code> if
 the requested joystick or axis does not exist.</p>
-<p>Arguments:</p>
+<p>Parameters:</p>
 <ul class="simple">
 <li><code class="docutils literal notranslate"><span class="pre">joystick</span></code> -- The number of the joystick to check, where <code class="docutils literal notranslate"><span class="pre">0</span></code>
 is the first joystick, or the name of the joystick to check.</li>
@@ -76,7 +76,7 @@ first axis of the joystick.</li>
 <dd><p>Return the horizontal position of a joystick hat (d-pad).  Can be
 <code class="docutils literal notranslate"><span class="pre">-1</span></code> (left), <code class="docutils literal notranslate"><span class="pre">0</span></code> (centered), or <code class="docutils literal notranslate"><span class="pre">1</span></code> (right).  Return <code class="docutils literal notranslate"><span class="pre">0</span></code> if
 the requested joystick or hat does not exist.</p>
-<p>Arguments:</p>
+<p>Parameters:</p>
 <ul class="simple">
 <li><code class="docutils literal notranslate"><span class="pre">joystick</span></code> -- The number of the joystick to check, where <code class="docutils literal notranslate"><span class="pre">0</span></code>
 is the first joystick, or the name of the joystick to check.</li>
@@ -91,7 +91,7 @@ first hat of the joystick.</li>
 <dd><p>Return the vertical position of a joystick hat (d-pad).  Can be
 <code class="docutils literal notranslate"><span class="pre">-1</span></code> (up), <code class="docutils literal notranslate"><span class="pre">0</span></code> (centered), or <code class="docutils literal notranslate"><span class="pre">1</span></code> (down).  Return <code class="docutils literal notranslate"><span class="pre">0</span></code> if the
 requested joystick or hat does not exist.</p>
-<p>Arguments:</p>
+<p>Parameters:</p>
 <ul class="simple">
 <li><code class="docutils literal notranslate"><span class="pre">joystick</span></code> -- The number of the joystick to check, where <code class="docutils literal notranslate"><span class="pre">0</span></code>
 is the first joystick, or the name of the joystick to check.</li>
@@ -105,7 +105,7 @@ first hat of the joystick.</li>
 <code class="descclassname">sge.joystick.</code><code class="descname">get_pressed</code><span class="sig-paren">(</span><em>joystick</em>, <em>button</em><span class="sig-paren">)</span><a class="headerlink" href="#sge.joystick.get_pressed" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return whether or not a joystick button is pressed, or
 <code class="xref py py-const docutils literal notranslate"><span class="pre">False</span></code> if the requested joystick or button does not exist.</p>
-<p>Arguments:</p>
+<p>Parameters:</p>
 <ul class="simple">
 <li><code class="docutils literal notranslate"><span class="pre">joystick</span></code> -- The number of the joystick to check, where <code class="docutils literal notranslate"><span class="pre">0</span></code>
 is the first joystick, or the name of the joystick to check.</li>
@@ -125,7 +125,7 @@ the first button of the joystick.</li>
 <code class="descclassname">sge.joystick.</code><code class="descname">get_name</code><span class="sig-paren">(</span><em>joystick</em><span class="sig-paren">)</span><a class="headerlink" href="#sge.joystick.get_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the name of a joystick, or <code class="docutils literal notranslate"><span class="pre">None</span></code> if the requested joystick
 does not exist.</p>
-<p>Arguments:</p>
+<p>Parameters:</p>
 <ul class="simple">
 <li><code class="docutils literal notranslate"><span class="pre">joystick</span></code> -- The number of the joystick to check, where <code class="docutils literal notranslate"><span class="pre">0</span></code>
 is the first joystick, or the name of the joystick to check.</li>
@@ -137,7 +137,7 @@ is the first joystick, or the name of the joystick to check.</li>
 <code class="descclassname">sge.joystick.</code><code class="descname">get_id</code><span class="sig-paren">(</span><em>joystick</em><span class="sig-paren">)</span><a class="headerlink" href="#sge.joystick.get_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the number of a joystick, where <code class="docutils literal notranslate"><span class="pre">0</span></code> is the first joystick,
 or <code class="docutils literal notranslate"><span class="pre">None</span></code> if the requested joystick does not exist.</p>
-<p>Arguments:</p>
+<p>Parameters:</p>
 <ul class="simple">
 <li><code class="docutils literal notranslate"><span class="pre">joystick</span></code> -- The number of the joystick to check, where <code class="docutils literal notranslate"><span class="pre">0</span></code>
 is the first joystick, or the name of the joystick to check.</li>
@@ -149,7 +149,7 @@ is the first joystick, or the name of the joystick to check.</li>
 <code class="descclassname">sge.joystick.</code><code class="descname">get_axes</code><span class="sig-paren">(</span><em>joystick</em><span class="sig-paren">)</span><a class="headerlink" href="#sge.joystick.get_axes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the number of axes available on a joystick, or <code class="docutils literal notranslate"><span class="pre">0</span></code> if the
 requested joystick does not exist.</p>
-<p>Arguments:</p>
+<p>Parameters:</p>
 <ul class="simple">
 <li><code class="docutils literal notranslate"><span class="pre">joystick</span></code> -- The number of the joystick to check, where <code class="docutils literal notranslate"><span class="pre">0</span></code>
 is the first joystick, or the name of the joystick to check.</li>
@@ -161,7 +161,7 @@ is the first joystick, or the name of the joystick to check.</li>
 <code class="descclassname">sge.joystick.</code><code class="descname">get_hats</code><span class="sig-paren">(</span><em>joystick</em><span class="sig-paren">)</span><a class="headerlink" href="#sge.joystick.get_hats" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the number of hats (d-pads) available on a joystick, or <code class="docutils literal notranslate"><span class="pre">0</span></code>
 if the requested joystick does not exist.</p>
-<p>Arguments:</p>
+<p>Parameters:</p>
 <ul class="simple">
 <li><code class="docutils literal notranslate"><span class="pre">joystick</span></code> -- The number of the joystick to check, where <code class="docutils literal notranslate"><span class="pre">0</span></code>
 is the first joystick, or the name of the joystick to check.</li>
@@ -173,7 +173,7 @@ is the first joystick, or the name of the joystick to check.</li>
 <code class="descclassname">sge.joystick.</code><code class="descname">get_trackballs</code><span class="sig-paren">(</span><em>joystick</em><span class="sig-paren">)</span><a class="headerlink" href="#sge.joystick.get_trackballs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the number of trackballs available on a joystick, or <code class="docutils literal notranslate"><span class="pre">0</span></code> if
 the requested joystick does not exist.</p>
-<p>Arguments:</p>
+<p>Parameters:</p>
 <ul class="simple">
 <li><code class="docutils literal notranslate"><span class="pre">joystick</span></code> -- The number of the joystick to check, where <code class="docutils literal notranslate"><span class="pre">0</span></code>
 is the first joystick, or the name of the joystick to check.</li>
@@ -185,7 +185,7 @@ is the first joystick, or the name of the joystick to check.</li>
 <code class="descclassname">sge.joystick.</code><code class="descname">get_buttons</code><span class="sig-paren">(</span><em>joystick</em><span class="sig-paren">)</span><a class="headerlink" href="#sge.joystick.get_buttons" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the number of buttons available on a joystick, or <code class="docutils literal notranslate"><span class="pre">0</span></code> if
 the requested joystick does not exist.</p>
-<p>Arguments:</p>
+<p>Parameters:</p>
 <ul class="simple">
 <li><code class="docutils literal notranslate"><span class="pre">joystick</span></code> -- The number of the joystick to check, where <code class="docutils literal notranslate"><span class="pre">0</span></code>
 is the first joystick, or the name of the joystick to check.</li>

@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>sge.snd &#8212; Seclusion Game Engine 1.7 documentation</title>
+    <title>sge.snd &#8212; Seclusion Game Engine 2.0 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -135,7 +135,7 @@ two sounds parents of each other, is undefined.</p>
 <dl class="method">
 <dt id="sge.snd.Sound.__init__">
 <code class="descclassname">Sound.</code><code class="descname">__init__</code><span class="sig-paren">(</span><em>fname</em>, <em>volume=1</em>, <em>max_play=1</em>, <em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sge.snd.Sound.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Arguments:</p>
+<dd><p>Parameters:</p>
 <ul class="simple">
 <li><code class="docutils literal notranslate"><span class="pre">fname</span></code> -- The path to the sound file.  If set to
 <code class="docutils literal notranslate"><span class="pre">None</span></code>, this object will not actually play any sound. If
@@ -153,7 +153,7 @@ more information.</p>
 <dt id="sge.snd.Sound.play">
 <code class="descclassname">Sound.</code><code class="descname">play</code><span class="sig-paren">(</span><em>loops=1</em>, <em>volume=1</em>, <em>balance=0</em>, <em>maxtime=None</em>, <em>fade_time=None</em>, <em>force=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sge.snd.Sound.play" title="Permalink to this definition">¶</a></dt>
 <dd><p>Play the sound.</p>
-<p>Arguments:</p>
+<p>Parameters:</p>
 <ul class="simple">
 <li><code class="docutils literal notranslate"><span class="pre">loops</span></code> -- The number of times to play the sound; set to
 <code class="docutils literal notranslate"><span class="pre">None</span></code> or <code class="docutils literal notranslate"><span class="pre">0</span></code> to loop indefinitely.</li>
@@ -181,7 +181,7 @@ playing will be stopped.</li>
 <dt id="sge.snd.Sound.stop">
 <code class="descclassname">Sound.</code><code class="descname">stop</code><span class="sig-paren">(</span><em>fade_time=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sge.snd.Sound.stop" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stop the sound.</p>
-<p>Arguments:</p>
+<p>Parameters:</p>
 <ul class="simple">
 <li><code class="docutils literal notranslate"><span class="pre">fade_time</span></code> -- The time in milliseconds over which to fade
 the sound out before stopping; set to <code class="docutils literal notranslate"><span class="pre">None</span></code> or <code class="docutils literal notranslate"><span class="pre">0</span></code> to
@@ -209,7 +209,7 @@ immediately stop the sound.</li>
 <dt id="sge.snd.Music">
 <em class="property">class </em><code class="descclassname">sge.snd.</code><code class="descname">Music</code><span class="sig-paren">(</span><em>fname</em>, <em>volume=1</em><span class="sig-paren">)</span><a class="headerlink" href="#sge.snd.Music" title="Permalink to this definition">¶</a></dt>
 <dd><p>This class stores and plays music.  Music is very similar to sound
-effects, but only one music file can be played at a time, and it is
+effects, but only one music file can be played at a time and it is
 more efficient for larger files than <a class="reference internal" href="#sge.snd.Sound" title="sge.snd.Sound"><code class="xref py py-class docutils literal notranslate"><span class="pre">sge.snd.Sound</span></code></a>.</p>
 <p>What music formats are supported depends on the implementation of
 the SGE, but Ogg Vorbis is generally a good choice.  See the
@@ -259,7 +259,7 @@ milliseconds.  (Read-only)</p>
 <dl class="method">
 <dt id="sge.snd.Music.__init__">
 <code class="descclassname">Music.</code><code class="descname">__init__</code><span class="sig-paren">(</span><em>fname</em>, <em>volume=1</em><span class="sig-paren">)</span><a class="headerlink" href="#sge.snd.Music.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Arguments:</p>
+<dd><p>Parameters:</p>
 <ul class="simple">
 <li><code class="docutils literal notranslate"><span class="pre">fname</span></code> -- The path to the sound file.  If set to <code class="docutils literal notranslate"><span class="pre">None</span></code>,
 this object will not actually play any music.  If this is
@@ -277,7 +277,7 @@ more information.</p>
 <dt id="sge.snd.Music.play">
 <code class="descclassname">Music.</code><code class="descname">play</code><span class="sig-paren">(</span><em>start=0</em>, <em>loops=1</em>, <em>maxtime=None</em>, <em>fade_time=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sge.snd.Music.play" title="Permalink to this definition">¶</a></dt>
 <dd><p>Play the music.</p>
-<p>Arguments:</p>
+<p>Parameters:</p>
 <ul class="simple">
 <li><code class="docutils literal notranslate"><span class="pre">start</span></code> -- The number of milliseconds from the beginning to
 start playing at.</li>
