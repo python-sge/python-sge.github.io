@@ -1,19 +1,17 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Tutorial 3: Better Pong &#8212; Seclusion Game Engine 2.0 documentation</title>
-    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutorial 3: Better Pong &#8212; Seclusion Game Engine 2.0.1 documentation</title>
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -35,34 +33,39 @@
   <div class="section" id="tutorial-3-better-pong">
 <h1><a class="toc-backref" href="#id1">Tutorial 3: Better Pong</a><a class="headerlink" href="#tutorial-3-better-pong" title="Permalink to this headline">¶</a></h1>
 <div class="contents topic" id="contents">
-<p class="topic-title first">Contents</p>
+<p class="topic-title">Contents</p>
 <ul class="simple">
-<li><a class="reference internal" href="#tutorial-3-better-pong" id="id1">Tutorial 3: Better Pong</a><ul>
-<li><a class="reference internal" href="#adding-scoring" id="id2">Adding Scoring</a><ul>
-<li><a class="reference internal" href="#making-enter-restart-the-game" id="id3">Making Enter Restart the Game</a></li>
-<li><a class="reference internal" href="#giving-points-to-the-players" id="id4">Giving Points to the Players</a></li>
-<li><a class="reference internal" href="#displaying-the-scores" id="id5">Displaying the Scores</a><ul>
-<li><a class="reference internal" href="#new-resources" id="id6">New Resources</a></li>
-<li><a class="reference internal" href="#drawing-the-hud" id="id7">Drawing the HUD</a></li>
-<li><a class="reference internal" href="#displaying-the-hud" id="id8">Displaying the HUD</a></li>
+<li><p><a class="reference internal" href="#tutorial-3-better-pong" id="id1">Tutorial 3: Better Pong</a></p>
+<ul>
+<li><p><a class="reference internal" href="#adding-scoring" id="id2">Adding Scoring</a></p>
+<ul>
+<li><p><a class="reference internal" href="#making-enter-restart-the-game" id="id3">Making Enter Restart the Game</a></p></li>
+<li><p><a class="reference internal" href="#giving-points-to-the-players" id="id4">Giving Points to the Players</a></p></li>
+<li><p><a class="reference internal" href="#displaying-the-scores" id="id5">Displaying the Scores</a></p>
+<ul>
+<li><p><a class="reference internal" href="#new-resources" id="id6">New Resources</a></p></li>
+<li><p><a class="reference internal" href="#drawing-the-hud" id="id7">Drawing the HUD</a></p></li>
+<li><p><a class="reference internal" href="#displaying-the-hud" id="id8">Displaying the HUD</a></p></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#giving-victory" id="id9">Giving Victory</a></li>
+<li><p><a class="reference internal" href="#giving-victory" id="id9">Giving Victory</a></p></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#adding-sounds" id="id10">Adding Sounds</a><ul>
-<li><a class="reference internal" href="#getting-the-sounds" id="id11">Getting the Sounds</a></li>
-<li><a class="reference internal" href="#loading-the-sounds" id="id12">Loading the Sounds</a></li>
-<li><a class="reference internal" href="#playing-the-sounds" id="id13">Playing the Sounds</a></li>
+<li><p><a class="reference internal" href="#adding-sounds" id="id10">Adding Sounds</a></p>
+<ul>
+<li><p><a class="reference internal" href="#getting-the-sounds" id="id11">Getting the Sounds</a></p></li>
+<li><p><a class="reference internal" href="#loading-the-sounds" id="id12">Loading the Sounds</a></p></li>
+<li><p><a class="reference internal" href="#playing-the-sounds" id="id13">Playing the Sounds</a></p></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#adding-joystick-support" id="id14">Adding Joystick Support</a><ul>
-<li><a class="reference internal" href="#axis-movement" id="id15">Axis Movement</a></li>
-<li><a class="reference internal" href="#trackball-movement" id="id16">Trackball Movement</a></li>
-<li><a class="reference internal" href="#applying-the-joystick-controls" id="id17">Applying the Joystick Controls</a></li>
+<li><p><a class="reference internal" href="#adding-joystick-support" id="id14">Adding Joystick Support</a></p>
+<ul>
+<li><p><a class="reference internal" href="#axis-movement" id="id15">Axis Movement</a></p></li>
+<li><p><a class="reference internal" href="#trackball-movement" id="id16">Trackball Movement</a></p></li>
+<li><p><a class="reference internal" href="#applying-the-joystick-controls" id="id17">Applying the Joystick Controls</a></p></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#the-final-result" id="id18">The Final Result</a></li>
+<li><p><a class="reference internal" href="#the-final-result" id="id18">The Final Result</a></p></li>
 </ul>
 </li>
 </ul>
@@ -159,8 +162,8 @@ you prefer.  Pass your choice as the first argument to
 <a class="reference internal" href="gfx.html#sge.gfx.Font.__init__" title="sge.gfx.Font.__init__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">sge.gfx.Font.__init__()</span></code></a>.  Set the <code class="docutils literal notranslate"><span class="pre">size</span></code> keyword argument to
 <code class="docutils literal notranslate"><span class="pre">48</span></code>.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">We are using system fonts for simplicity, but it is generally a bad
+<p class="admonition-title">Note</p>
+<p>We are using system fonts for simplicity, but it is generally a bad
 idea to rely on them.  There is no standard for what fonts are
 available on the system, and the set of fonts available on the system
 varies widely.  In real projects, it is better to distribute a font
@@ -228,8 +231,8 @@ we want a HUD to be displayed, which is why we are using a
 <a class="reference internal" href="dsp.html#sge.dsp.Game" title="sge.dsp.Game"><code class="xref py py-class docutils literal notranslate"><span class="pre">sge.dsp.Game</span></code></a> projection instead of a <a class="reference internal" href="dsp.html#sge.dsp.Room" title="sge.dsp.Room"><code class="xref py py-class docutils literal notranslate"><span class="pre">sge.dsp.Room</span></code></a>
 projection or <a class="reference internal" href="dsp.html#sge.dsp.Object" title="sge.dsp.Object"><code class="xref py py-class docutils literal notranslate"><span class="pre">sge.dsp.Object</span></code></a> object.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">You may notice that, when you pause the game, the HUD disappears.
+<p class="admonition-title">Note</p>
+<p>You may notice that, when you pause the game, the HUD disappears.
 This is <em>not</em> a bug! This happens because the step event doesn't
 occur while the game is paused.  If you want the HUD to show up while
 the game is paused, project it in the paused step event, defined by
@@ -309,8 +312,8 @@ sounds.  Generate three sounds: one for the ball bouncing off a paddle
 examples/data.  Create a folder in your project directory with the name
 &quot;data&quot; and put your sounds in this folder.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Some file systems, like FAT32 and NTFS, are case-insensitive and will
+<p class="admonition-title">Note</p>
+<p>Some file systems, like FAT32 and NTFS, are case-insensitive and will
 allow you to treat &quot;bounce.wav&quot; and &quot;Bounce.wav&quot; as if they are the
 same file name, but some, such as pretty much every Linux file
 system, are case-sensitive, meaning that &quot;bounce.wav&quot; and
@@ -409,12 +412,12 @@ the same frame.</p>
 paddle.  We need to change this so that the joystick controls we defined
 can be used as well.  It will be replaced with the following:</p>
 <ul class="simple">
-<li>If the absolute value of <code class="docutils literal notranslate"><span class="pre">axis_motion</span></code> is greater than the absolute
+<li><p>If the absolute value of <code class="docutils literal notranslate"><span class="pre">axis_motion</span></code> is greater than the absolute
 value of both <code class="docutils literal notranslate"><span class="pre">key_motion</span></code> and <code class="xref py py-attr docutils literal notranslate"><span class="pre">trackball_motion</span></code>, set
-<code class="xref py py-attr docutils literal notranslate"><span class="pre">yvelocity</span></code> to <code class="docutils literal notranslate"><span class="pre">axis_motion</span> <span class="pre">*</span> <span class="pre">PADDLE_SPEED</span></code>.</li>
-<li>Otherwise, if <code class="xref py py-attr docutils literal notranslate"><span class="pre">trackball_motion</span></code> is greater than <code class="docutils literal notranslate"><span class="pre">key_motion</span></code>,
-set <code class="xref py py-attr docutils literal notranslate"><span class="pre">yvelocity</span></code> to <code class="docutils literal notranslate"><span class="pre">self.trackball_motion</span> <span class="pre">*</span> <span class="pre">PADDLE_SPEED</span></code></li>
-<li>Otherwise, use the line we have been using up until this point.</li>
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">yvelocity</span></code> to <code class="docutils literal notranslate"><span class="pre">axis_motion</span> <span class="pre">*</span> <span class="pre">PADDLE_SPEED</span></code>.</p></li>
+<li><p>Otherwise, if <code class="xref py py-attr docutils literal notranslate"><span class="pre">trackball_motion</span></code> is greater than <code class="docutils literal notranslate"><span class="pre">key_motion</span></code>,
+set <code class="xref py py-attr docutils literal notranslate"><span class="pre">yvelocity</span></code> to <code class="docutils literal notranslate"><span class="pre">self.trackball_motion</span> <span class="pre">*</span> <span class="pre">PADDLE_SPEED</span></code></p></li>
+<li><p>Otherwise, use the line we have been using up until this point.</p></li>
 </ul>
 <p>After this, we must set <code class="xref py py-attr docutils literal notranslate"><span class="pre">trackball_motion</span></code> to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
 </div>
@@ -495,7 +498,7 @@ set <code class="xref py py-attr docutils literal notranslate"><span class="pre"
 
     <span class="n">score</span> <span class="o">=</span> <span class="mi">0</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">player</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">player</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">player</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">joystick</span> <span class="o">=</span> <span class="mi">0</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">up_key</span> <span class="o">=</span> <span class="s2">&quot;w&quot;</span>
@@ -546,7 +549,7 @@ set <code class="xref py py-attr docutils literal notranslate"><span class="pre"
 
 <span class="k">class</span> <span class="nc">Ball</span><span class="p">(</span><span class="n">sge</span><span class="o">.</span><span class="n">dsp</span><span class="o">.</span><span class="n">Object</span><span class="p">):</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">x</span> <span class="o">=</span> <span class="n">sge</span><span class="o">.</span><span class="n">game</span><span class="o">.</span><span class="n">width</span> <span class="o">/</span> <span class="mi">2</span>
         <span class="n">y</span> <span class="o">=</span> <span class="n">sge</span><span class="o">.</span><span class="n">game</span><span class="o">.</span><span class="n">height</span> <span class="o">/</span> <span class="mi">2</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">sprite</span><span class="o">=</span><span class="n">ball_sprite</span><span class="p">)</span>
@@ -724,17 +727,15 @@ set <code class="xref py py-attr docutils literal notranslate"><span class="pre"
 </ul>
 </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -743,7 +744,7 @@ set <code class="xref py py-attr docutils literal notranslate"><span class="pre"
       &copy;.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.4</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.4.3</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
       
       |
